@@ -108,11 +108,11 @@ public class SwiftFlutterSocialContentSharePlugin: NSObject, FlutterPlugin, Shar
             }
             if let flutterAppDelegate = UIApplication.shared.delegate as? FlutterAppDelegate {
                 let shareDialog = ShareDialog(
-                    fromViewController: flutterAppDelegate.window.rootViewController,
+                    viewController: flutterAppDelegate.window.rootViewController,
                     content: shareContent,
                     delegate: self
                 )
-                shareDialog.mode = .automatic
+//                shareDialog.mode = .automatic
                 shareDialog.show()
                 self.result?("Success")
             } else{
